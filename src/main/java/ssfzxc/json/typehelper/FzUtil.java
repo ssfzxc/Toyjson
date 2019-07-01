@@ -1,4 +1,4 @@
-package ssfzxc.typehelper;
+package ssfzxc.json.typehelper;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;

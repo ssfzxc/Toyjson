@@ -1,7 +1,7 @@
-package ssfzxc.typehelper;
+package ssfzxc.json.typehelper;
 
-import ssfzxc.typehelper.type.FzJavaObjectToMap;
-import ssfzxc.typehelper.type.FzSimpleTypeConverter;
+import ssfzxc.json.typehelper.type.FzJavaObjectToMap;
+import ssfzxc.json.typehelper.type.FzSimpleTypeConverter;
 
 import java.util.ArrayList;
 import java.util.List;

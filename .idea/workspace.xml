@@ -1,5 +1,136 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="71e4d7c5-d69a-4b5b-ab83-7d0edeb51d78" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/ssfzxc/json/JSON.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ssfzxc/json/JSONArray.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ssfzxc/json/JSONException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ssfzxc/json/JSONHelper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ssfzxc/json/JSONObject.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ssfzxc/json/parser/Lexer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ssfzxc/json/parser/ParseException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ssfzxc/json/parser/Parser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ssfzxc/json/parser/ParserConstants.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ssfzxc/json/parser/ParserTokenManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ssfzxc/json/parser/SimpleCharStream.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ssfzxc/json/parser/Token.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ssfzxc/json/parser/TokenMgrError.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ssfzxc/json/parser/parser.jj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ssfzxc/json/util/TypeCastUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/test.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ssfzxc/json/parser/ParserTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ssfzxc/typehelper/FzException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ssfzxc/json/typehelper/FzException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ssfzxc/typehelper/FzReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ssfzxc/json/typehelper/FzReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ssfzxc/typehelper/FzTypeConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ssfzxc/json/typehelper/FzTypeConverter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ssfzxc/typehelper/FzUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ssfzxc/json/typehelper/FzUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ssfzxc/typehelper/FzWriter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ssfzxc/json/typehelper/FzWriter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ssfzxc/typehelper/TypeHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ssfzxc/json/typehelper/TypeHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ssfzxc/typehelper/type/FzJavaObjectToMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ssfzxc/json/typehelper/type/FzJavaObjectToMap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ssfzxc/typehelper/type/FzSimpleTypeConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ssfzxc/json/typehelper/type/FzSimpleTypeConverter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ssfzxc/typehelper/type/FzTypeConverters.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ssfzxc/json/typehelper/type/FzTypeConverters.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ssfzxc/typehelper/TypeHelperTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ssfzxc/json/typehelper/TypeHelperTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ssfzxc/typehelper/TypeTestBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ssfzxc/json/typehelper/TypeTestBean.java" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="83367906">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.open.time.2" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="gitignore" value="1" />
+          <entry key="java" value="28" />
+          <entry key="json" value="1" />
+          <entry key="xml" value="3" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="Git file" value="1" />
+          <entry key="JAVA" value="28" />
+          <entry key="JSON" value="1" />
+          <entry key="XML" value="3" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="gitignore" value="20" />
+          <entry key="java" value="835" />
+          <entry key="xml" value="20" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="Git file" value="20" />
+          <entry key="JAVA" value="835" />
+          <entry key="XML" value="20" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="256">
+              <caret line="16" selection-start-line="16" selection-end-line="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/ssfzxc/json/parser/ParserTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="220">
+              <caret line="105" column="79" lean-forward="true" selection-start-line="105" selection-start-column="79" selection-end-line="105" selection-end-column="79" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="83">
+              <caret line="29" column="6" selection-start-line="29" selection-start-column="6" selection-end-line="29" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/ssfzxc/json/typehelper/TypeHelperTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="144">
+              <caret line="27" selection-start-line="27" selection-end-line="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="GradleLocalSettings">
     <option name="projectSyncType">
       <map>
@@ -7,11 +138,30 @@
       </map>
     </option>
   </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/test/java/ssfzxc/flatjson/parser/ParserTest.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/ssfzxc/json/JSONArray.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ssfzxc/json/JSON.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ssfzxc/json/JSONHelper.java" />
+        <option value="$PROJECT_DIR$/src/test/java/ssfzxc/json/parser/ParserTest.java" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsFlowSettings">
     <service-enabled>true</service-enabled>
     <exe-path />
     <other-services-enabled>true</other-services-enabled>
     <auto-save>true</auto-save>
+  </component>
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -82,6 +232,27 @@
       </profile-state>
     </entry>
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Toyjson" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Toyjson" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+    </panes>
+  </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
@@ -95,23 +266,80 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
-  <component name="RunManager">
-    <configuration name="TypeHelperTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="ssfzxc.json" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\jproject\Toyjson\src\main\resources" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="JUnit.ParserTest.json">
+    <configuration name="ParserTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Toyson" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ssfzxc.typehelper.*" />
+          <option name="PATTERN" value="ssfzxc.json.parser.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="ssfzxc.typehelper" />
-      <option name="MAIN_CLASS_NAME" value="ssfzxc.typehelper.TypeHelperTest" />
+      <option name="PACKAGE_NAME" value="ssfzxc.json.parser" />
+      <option name="MAIN_CLASS_NAME" value="ssfzxc.json.parser.ParserTest" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ParserTest.json" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Toyson" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ssfzxc.json.parser.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ssfzxc.json.parser" />
+      <option name="MAIN_CLASS_NAME" value="ssfzxc.json.parser.ParserTest" />
+      <option name="METHOD_NAME" value="json" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TypeHelperTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Toyson" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ssfzxc.json.typehelper.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ssfzxc.json.typehelper" />
+      <option name="MAIN_CLASS_NAME" value="ssfzxc.json.typehelper.TypeHelperTest" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="JUnit.TypeHelperTest" />
+      <item itemvalue="JUnit.ParserTest" />
+      <item itemvalue="JUnit.ParserTest.json" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ParserTest.json" />
+        <item itemvalue="JUnit.ParserTest" />
         <item itemvalue="JUnit.TypeHelperTest" />
       </list>
     </recent_temporary>
@@ -123,8 +351,220 @@
   <component name="SvnConfiguration">
     <configuration>C:\Users\Administrator\AppData\Roaming\Subversion</configuration>
   </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="71e4d7c5-d69a-4b5b-ab83-7d0edeb51d78" name="Default Changelist" comment="" />
+      <created>1561965865934</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1561965865934</updated>
+      <workItem from="1561965868831" duration="1997000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="TypeHelperTest - 2019.07.01 at 15h 25m 27s.xml">
+      <configuration name="TypeHelperTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ParserTest - 2019.07.01 at 15h 53m 16s.xml">
+      <configuration name="ParserTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ParserTest - 2019.07.01 at 15h 54m 22s.xml">
+      <configuration name="ParserTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ParserTest_json - 2019.07.01 at 16h 06m 29s.xml">
+      <configuration name="ParserTest.json" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ParserTest_json - 2019.07.01 at 16h 06m 55s.xml">
+      <configuration name="ParserTest.json" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ParserTest_json - 2019.07.01 at 16h 07m 20s.xml">
+      <configuration name="ParserTest.json" configurationId="JUnit" />
+    </history-entry>
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="1997000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
+    <layout>
+      <window_info id="Designer" />
+      <window_info id="UI Designer" />
+      <window_info id="Favorites" side_tool="true" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24011713" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
+      <window_info active="true" anchor="bottom" id="Version Control" visible="true" weight="0.32917318" />
+      <window_info anchor="bottom" id="Messages" weight="0.32917318" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.39157566" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39937598" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Palette" />
+      <window_info anchor="right" id="Palette&#9;" />
+      <window_info anchor="right" id="Database" />
+      <window_info anchor="right" id="Maven Projects" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+    <layout-to-restore>
+      <window_info id="Designer" order="0" />
+      <window_info id="UI Designer" order="1" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="3" visible="true" weight="0.24011713" />
+      <window_info id="Structure" order="4" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Version Control" order="0" weight="0.32917318" />
+      <window_info anchor="bottom" id="Terminal" order="1" />
+      <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Database Changes" order="3" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Messages" order="4" weight="0.32917318" />
+      <window_info anchor="bottom" id="Message" order="5" />
+      <window_info anchor="bottom" id="Find" order="6" />
+      <window_info anchor="bottom" id="Run" order="7" weight="0.32917318" />
+      <window_info anchor="bottom" id="Debug" order="8" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="11" />
+      <window_info anchor="right" id="Palette" order="0" />
+      <window_info anchor="right" id="Database" order="1" />
+      <window_info anchor="right" id="Palette&#9;" order="2" />
+      <window_info anchor="right" id="Maven Projects" order="3" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="4" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="5" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="6" weight="0.25" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ssfzxc/json/parser/ParserConstants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/test.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ssfzxc/json/JSONException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ssfzxc/json/JSONObject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="16">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ssfzxc/json/typehelper/TypeHelperTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ssfzxc/json/parser/Parser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-492">
+          <caret line="189" column="20" lean-forward="true" selection-start-line="189" selection-start-column="20" selection-end-line="189" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ssfzxc/json/JSONArray.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="14" column="49" selection-start-line="14" selection-start-column="49" selection-end-line="14" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ssfzxc/json/JSON.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ssfzxc/json/JSONHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="11" column="21" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ssfzxc/json/typehelper/FzException.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ssfzxc/json/parser/ParserTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="105" column="79" lean-forward="true" selection-start-line="105" selection-start-column="79" selection-end-line="105" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="83">
+          <caret line="29" column="6" selection-start-line="29" selection-start-column="6" selection-end-line="29" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
   </component>
   <component name="masterDetails">
     <states>

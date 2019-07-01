@@ -1,4 +1,4 @@
-package ssfzxc.typehelper;
+package ssfzxc.json.typehelper;
 
 /**
  * Created by ssf on 2018-04-08.

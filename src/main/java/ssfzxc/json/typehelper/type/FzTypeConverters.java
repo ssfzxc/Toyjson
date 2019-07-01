@@ -1,9 +1,9 @@
-package ssfzxc.typehelper.type;
+package ssfzxc.json.typehelper.type;
 
-import ssfzxc.typehelper.FzException;
-import ssfzxc.typehelper.FzReader;
-import ssfzxc.typehelper.FzUtil;
-import ssfzxc.typehelper.FzWriter;
+import ssfzxc.json.typehelper.FzException;
+import ssfzxc.json.typehelper.FzReader;
+import ssfzxc.json.typehelper.FzUtil;
+import ssfzxc.json.typehelper.FzWriter;
 
 import java.beans.BeanInfo;
 import java.beans.Introspector;

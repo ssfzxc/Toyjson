@@ -1,8 +1,8 @@
-package ssfzxc.typehelper.type;
+package ssfzxc.json.typehelper.type;
 
-import ssfzxc.typehelper.FzException;
-import ssfzxc.typehelper.FzReader;
-import ssfzxc.typehelper.FzTypeConverter;
+import ssfzxc.json.typehelper.FzException;
+import ssfzxc.json.typehelper.FzReader;
+import ssfzxc.json.typehelper.FzTypeConverter;
 
 import java.util.ArrayList;
 import java.util.List;

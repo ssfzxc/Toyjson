@@ -1,4 +1,4 @@
-package ssfzxc.typehelper;
+package ssfzxc.json.typehelper;
 import org.junit.Test;
 
 import java.util.Date;

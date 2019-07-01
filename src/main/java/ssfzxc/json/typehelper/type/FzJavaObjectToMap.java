@@ -1,7 +1,7 @@
-package ssfzxc.typehelper.type;
+package ssfzxc.json.typehelper.type;
 
-import ssfzxc.typehelper.FzException;
-import ssfzxc.typehelper.FzWriter;
+import ssfzxc.json.typehelper.FzException;
+import ssfzxc.json.typehelper.FzWriter;
 
 import java.util.*;
 

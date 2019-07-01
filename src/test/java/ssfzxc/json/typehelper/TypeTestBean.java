@@ -1,4 +1,4 @@
-package ssfzxc.typehelper;
+package ssfzxc.json.typehelper;
 
 import java.io.Serializable;
 import java.util.Date;

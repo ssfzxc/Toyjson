@@ -1,4 +1,4 @@
-package ssfzxc.typehelper;
+package ssfzxc.json.typehelper;
 
 /**
  * 将类型T1装换为类型T2的数据

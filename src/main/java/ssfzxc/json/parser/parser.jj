@@ -1,0 +1,304 @@
+options {
+    STATIC = false;
+    DEBUG_PARSER = true;
+    UNICODE_INPUT = true;
+    JDK_VERSION = "1.5";
+}
+
+PARSER_BEGIN(Parser)
+package ssf.flatjson.parser;
+
+import java.io.*;
+import ssf.flatjson.*;
+import java.math.BigDecimal;
+
+class Parser {
+
+    public static JSONObject parse(String src) throws ParseException {
+        Reader reader = new StringReader(src);
+        return new Parser(reader).parse();
+    }
+
+    public static JSONArray parseArray(String src) throws ParseException {
+        Reader reader = new StringReader(src);
+        return new Parser(reader).parseArray();
+    }
+
+    public static JSONObject parse(InputStream inputStream) throws ParseException {
+        return new Parser(new InputStreamReader(inputStream)).parse();
+    }
+
+    public static JSONArray parseArray(InputStream inputStream) throws ParseException {
+        return new Parser(new InputStreamReader(inputStream)).parseArray();
+    }
+
+    public JSONObject parse() throws ParseException {
+        return compilation_jsonobject();
+    }
+
+    public JSONArray parseArray() throws ParseException {
+        return compilation_jsonarray();
+    }
+
+    private BigDecimal numberValue(String image) {
+        return new BigDecimal(image);
+    }
+
+    // #@@range/stringValue{
+    private String stringValue(String _image) throws ParseException {
+        int pos = 0;
+        int idx;
+        StringBuffer buf = new StringBuffer();
+        String image = _image.substring(1, _image.length() - 1);
+
+        while ((idx = image.indexOf("\\", pos)) >= 0) {
+            buf.append(image.substring(pos, idx));
+            if (image.length() >= idx + 6
+                    && image.charAt(idx+1) == 'u'
+                    && isHexDigits(image.charAt(idx+2))
+                    && isHexDigits(image.charAt(idx+3))
+                    && isHexDigits(image.charAt(idx+4))
+                    && isHexDigits(image.charAt(idx+5))) {
+                buf.append(unescapeHex(image.substring(idx+2, idx+6)));
+                pos = idx + 6;
+            }
+            else {
+                buf.append(unescapeSeq(image.charAt(idx+1)));
+                pos = idx + 2;
+            }
+        }
+        if (pos < image.length()) {
+            buf.append(image.substring(pos, image.length()));
+        }
+        return buf.toString();
+    }
+    // #@@}
+
+    private static final int charMax = Character.MAX_VALUE;
+    // #@@range/unescapeHex{
+
+        private char unescapeHex(String digits) throws ParseException {
+            int i = Integer.parseInt(digits, 16);
+            if (i > charMax) {
+                throw new ParseException(
+                    "octal character sequence too big: \\" + digits);
+            }
+            return (char)i;
+        }
+        // #@@}
+
+    // #@@range/unescapeOctal{
+
+    private char unescapeOctal(String digits) throws ParseException {
+        int i = Integer.parseInt(digits, 8);
+        if (i > charMax) {
+            throw new ParseException(
+                "octal character sequence too big: \\" + digits);
+        }
+        return (char)i;
+    }
+    // #@@}
+
+    // #@@range/unescapeSeq{
+    private static final char bell = 7;
+    private static final char backspace = 8;
+    private static final char escape = 27;
+    private static final char vt = 11;
+
+    private char unescapeSeq(char c) throws ParseException {
+        switch (c) {
+        case '0': return '\0';
+        case '"': return '"';
+        case '\'': return '\'';
+        case 'a': return bell;
+        case 'b': return backspace;
+        case 'e': return escape;
+        case 'f': return '\f';
+        case 'n': return '\n';
+        case 'r': return '\r';
+        case 't': return '\t';
+        case 'v': return vt;
+        default:
+            throw new ParseException("unknown escape sequence: \"\\" + c);
+        }
+    }
+    // #@@}
+
+    // #@@range/isHexDigits() {
+    private boolean isHexDigits(char c) {
+        return ((c >= '0' && c <= '9') || (c >= 'a' && c <= 'f') || (c >= 'A' && c <= 'F'));
+    }
+    // #@@}
+}
+PARSER_END(Parser)
+
+/*
+ * Lexical Rules
+ */
+
+// linear-white-spaces
+// #@@range/lex_spaces{
+SPECIAL_TOKEN: { <SPACES: ([" ", "\t", "\n", "\r", "\f"])+> }
+// #@@}
+
+// block comment
+// #@@range/lex_block_comment{
+// MORE: { <"/*"> : IN_BLOCK_COMMENT }
+// <IN_BLOCK_COMMENT> MORE: { <~[]> }
+// <IN_BLOCK_COMMENT> SPECIAL_TOKEN: { <BLOCK_COMMENT: "*/"> : DEFAULT }
+// #@@}
+
+// line comment
+// #@@range/lex_line_comment{
+// SPECIAL_TOKEN: {
+//     <LINE_COMMENT: "//" (~["\n", "\r"])* ("\n" | "\r\n" | "\r")?>
+// }
+// #@@}
+
+// number literals
+// #@@range/lex_number{
+TOKEN: {
+    <NUMBER: ("-")?
+             ((["1"-"9"] (["0"-"9"])*) | "0")
+             ("." (["0"-"9"])+)? >
+}
+// #@@}
+
+// string literal
+// #@@range/lex_string{
+MORE: { <"\""> : IN_STRING }                           // rule1
+<IN_STRING> MORE: {
+    <(~["\"", "\\", "\n", "\r"])+>                      // rule2
+    | <"\\" ~[]>
+}
+<IN_STRING> TOKEN: { <STRING: "\""> : DEFAULT }        // rule5
+// #@@}
+
+// boolean literal
+// #@@range/lex_boolean {
+TOKEN: {
+    <TRUE       : "true">
+    | <FALSE    : "false">
+}
+// #@@}
+
+// null literal
+// #@@range/lex_null {
+TOKEN: {
+    <NULL       : "null">
+}
+// #@@}
+
+
+// object literal
+// #@@range/lex_object {
+TOKEN: {
+    <OBJECT_BEGIN       : "{">
+    | <OBJECT_END       : "}">
+}
+// #@@}
+
+// array literal
+// #@@range/lex_array {
+TOKEN: {
+    <ARRAY_BEGIN       : "[">
+    | <ARRAY_END       : "]">
+}
+// #@@}
+
+
+/*
+ *  Grammar
+ */
+
+JSONObject compilation_jsonobject():
+{
+    JSONObject jsonobject;
+}
+{
+    jsonobject = object()
+    {
+        return jsonobject;
+    }
+}
+
+JSONArray compilation_jsonarray():
+{
+    JSONArray jsonarray;
+}
+{
+    jsonarray = array()
+    {
+        return jsonarray;
+    }
+}
+
+
+JSON compilation_json():
+{
+    JSON json;
+}
+{
+    [
+        json = object()
+        | json = array()
+    ]
+    {
+        return json;
+    }
+}
+
+JSONObject object():
+{
+    Token key;
+    Object value;
+    JSONObject object = new JSONObject();
+}
+{
+    <OBJECT_BEGIN>
+    key = <STRING> ":" value = value() {object.put(stringValue(key.image), value);}
+    ("," (key = <STRING> ":" value = value()) {object.put(stringValue(key.image), value);})*
+    <OBJECT_END>
+    {
+        return object;
+    }
+}
+
+Object value():
+{
+    Object value;
+    Token t;
+}
+{
+    [
+        value = object()
+        | value = array()
+        | t=<STRING>
+            {value = stringValue(t.image);}
+        | t=<NUMBER>
+            {value = numberValue(t.image);}
+        | <TRUE>
+            {value = Boolean.TRUE;}
+        | <FALSE>
+            {value = Boolean.FALSE;}
+        | <NULL>
+            {value = null;}
+    ]
+    {
+        return value;
+    }
+}
+
+JSONArray array():
+{
+    JSONArray objects = new JSONArray();
+    Object object;
+}
+{
+    <ARRAY_BEGIN>
+    object = value() {objects.add(object);}
+    ("," object = value()  {objects.add(object);})*
+    <ARRAY_END>
+    {return objects;}
+}
+
